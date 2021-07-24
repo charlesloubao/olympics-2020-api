@@ -19,7 +19,7 @@ async function getSchedule() {
         schedule: []
     }
 
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: false, args: ["--no-sandbox"]});
     const page = await browser.newPage();
     await page.goto(url);
 
